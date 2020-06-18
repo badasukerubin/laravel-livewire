@@ -9,6 +9,7 @@
 
 ## Features
 - Laravel 7.x
+- SPA With TurboLink
 - Login
 - Registration With Email Verification 
 - Password Reset
@@ -21,27 +22,27 @@
 git clone https://github.com/000kelvin/laravel-livewire.git
 ```
 
-2. Enter the project folder
-```
-cd laravel-livewire
-```
-
-3. Create local environment and update the variables
+2. Create a local environment and update the variables
 ```
 cp .env.example .env
 ```
 
-4. Install composer dependencies
+3. Install all composer dependencies
 ```
 composer install
 ```
 
-5. Genarate application key
+4. Genarate an application key
 ```
 php artisan key:generate
 ```
 
-5. Serve application
+5. Run all migrations
+```
+php artisan key:generate
+```
+
+6. Serve the application
 ```
 php artisan serve
 ```
