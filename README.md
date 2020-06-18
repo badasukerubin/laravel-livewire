@@ -1,6 +1,6 @@
-<p>
-<img src="https://laravel.com/img/logomark.min.svg" width="70">
-<img src="https://laravel-livewire.com/img/twitter.png" width="70">
+<p align="center">
+<img src="https://laravel.com/img/logomark.min.svg" width="100">
+<img src="https://laravel-livewire.com/img/twitter.png" width="100">
 </p>
 
 ## Laravel and Livewire Boilerplate
@@ -47,15 +47,15 @@ php artisan serve
 ```
 
 
-### TODO
+## TODO
 
-- [] Add Password Update
-- [] Add Form CRUD with Image Upload (with real time validation)
-- [] Add Social Authentication
-- [] Add Profile Update
-- [] Add Profile Deletion
-- [] Add Docker
-- [] Add Tests
+- [ ] Add Password Update
+- [ ] Add Form CRUD with Image Upload (with real time validation)
+- [ ] Add Social Authentication
+- [ ] Add Profile Update
+- [ ] Add Profile Deletion
+- [ ] Add Docker
+- [ ] Add Tests
 
 ## Contributing
 
