@@ -9,7 +9,7 @@
 
 ## Features
 - Laravel 7.x
-- SPA With TurboLink
+- SPA With TurboLinks
 - Login
 - Registration With Email Verification 
 - Password Reset
@@ -53,10 +53,11 @@ php artisan serve
 - [ ] Add Password Update
 - [ ] Add Form CRUD with Image Upload (with real time validation)
 - [ ] Add Social Authentication
-- [ ] Add Profile Update
+- [ ] Add Profile Details and Update
 - [ ] Add Profile Deletion
 - [ ] Add Docker
 - [ ] Add Tests
+- [ ] Deploy to live server
 
 ## Contributing
 

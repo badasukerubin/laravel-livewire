@@ -13,10 +13,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::livewire('/', 'index')->name('index');
+
+/**
+ * Authentication routes
+ */
+Route::group(['middleware' => ['guest']], function () {
+    Route::livewire('/login', 'auth.login')->name('login');
+    Route::livewire('/register', 'auth.register')->name('register');
+    // Route::livewire('/password/reset', 'auth.passwords.email')->name('password.request');
+    // Route::livewire('/password/reset/{token}', 'auth.passwords.reset')->name('password.reset');
+    // Route::post('/password/reset', 'Auth\ForgotPasswordController@reset')->name('password.update');
 });
 
-Auth::routes();
+/**
+ * Verification  routes
+ */
+// Route::group(['middleware' => ['auth']], function () {
+//     Route::group(['middleware' => ['throttle:6,1']], function () {
+//         Route::post('/email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+//         Route::group(['middleware' => ['signed']], function () {
+//             Route::get('/email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
+//         });
+//     });
+//     Route::get('/email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+// });
 
-Route::get('/home', 'HomeController@index')->name('home');
+/**
+ * User routes
+ */
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::livewire('/home', 'home')->name('home');
+    Route::livewire('/logout', 'auth.logout')->name('logout');
+});
