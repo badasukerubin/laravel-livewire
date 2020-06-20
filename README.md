@@ -43,7 +43,12 @@ php artisan key:generate
 php artisan key:generate
 ```
 
-6. Serve the application
+6. Run queues
+```
+php artisan queue:work
+```
+
+7. Serve the application
 ```
 php artisan serve
 ```

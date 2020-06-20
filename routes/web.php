@@ -29,16 +29,14 @@ Route::group(['middleware' => ['guest']], function () {
 /**
  * Verification  routes
  *
- * All laravel's default scaffolding
  */
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['throttle:6,1']], function () {
-        Route::post('/email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+        Route::livewire('/email/verify', 'auth.verify')->name('verification.notice');
         Route::group(['middleware' => ['signed']], function () {
             Route::get('/email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
         });
     });
-    Route::get('/email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 });
 
 /**
