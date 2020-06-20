@@ -11,9 +11,10 @@
 - Laravel 7.x
 - SPA With TurboLinks
 - Login
-- Registration With Email Verification 
+- Registration With Email Verification
 - Password Reset
 - Real Time Validation
+- Mailing with Queues
 
 ## Installation
 
