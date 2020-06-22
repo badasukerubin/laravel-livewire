@@ -40,15 +40,20 @@ php artisan key:generate
 
 5. Run all migrations
 ```
-php artisan key:generate
+php artisan migrate
 ```
 
-6. Run queues
+6. Install node modules
+```
+npm install
+```
+
+7. Run queues
 ```
 php artisan queue:work
 ```
 
-7. Serve the application
+8. Serve the application
 ```
 php artisan serve
 ```
