@@ -21,9 +21,9 @@ Route::livewire('/', 'index')->name('index');
 Route::group(['middleware' => ['guest']], function () {
     Route::livewire('/login', 'auth.login')->name('login');
     Route::livewire('/register', 'auth.register')->name('register');
-    // Route::livewire('/password/reset', 'auth.passwords.email')->name('password.request');
-    // Route::livewire('/password/reset/{token}', 'auth.passwords.reset')->name('password.reset');
-    // Route::post('/password/reset', 'Auth\ForgotPasswordController@reset')->name('password.update');
+    Route::livewire('/password/reset', 'auth.passwords.email')->name('password.request');
+    Route::livewire('/password/reset/{token}', 'auth.passwords.reset')->name('password.reset');
+    Route::post('/password/reset', 'Auth\ForgotPasswordController@reset')->name('password.update');
 });
 
 /**
